@@ -8,14 +8,14 @@
 
 ## Instalación
 
-1. **Clonar el Repositorio:**
+&nbsp;1. **Clonar el Repositorio:**
 
-&nbsp; git clone https://github.com/aslskks/reconocimiento_facial  
-&nbsp; cd reconocimiento_facial-main  
-&nbsp; pip install -r requirements.txt  
+&nbsp;&nbsp; git clone https://github.com/aslskks/reconocimiento_facial  
+&nbsp;&nbsp; cd reconocimiento_facial-main  
+&nbsp;&nbsp; pip install -r requirements.txt  
 
-2. **Ejecutar:**
-&nbsp; python python.py
+&nbsp;2. **Ejecutar:**
+&nbsp;&nbsp; python python.py
 
 
 
