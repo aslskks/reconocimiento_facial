@@ -17,6 +17,3 @@
 &nbsp;2. **Ejecutar:**
 &nbsp;&nbsp; python python.py
 
-
-
-### silo
