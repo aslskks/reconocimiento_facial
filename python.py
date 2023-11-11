@@ -1,12 +1,10 @@
-import cv2
-import face_recognition
-from tkinter import messagebox
-import sys
-
-
 def main():
+    import cv2
+    import face_recognition
+
     # Cargar la imagen de referencia (la foto que deseas comparar)
-    reference_image = face_recognition.load_image_file("c.jpg")
+    reference_image = face_recognition.load_image_file(
+        "c.jpg")
     reference_face_encoding = face_recognition.face_encodings(reference_image)[
         0]
 
@@ -29,9 +27,13 @@ def main():
                 [reference_face_encoding], face_encoding)
 
             if results[0]:
-                # print("¡Cara detectada coincide con la foto de referencia!")
-                messagebox.showinfo(
-                    title="Reconocimineto facial", message="la cara coincide")
+                for (top, right, bottom, left) in face_locations:
+                    cv2.rectangle(frame, (left, top),
+                                  (right, bottom), (0, 255, 0), 2)
+                from tkinter.messagebox import showinfo
+                showinfo(title="Reconocimiento facial",
+                         message="acceso concedido")
+
                 sys.exit()
 
         # Mostrar el frame con las caras detectadas
@@ -47,9 +49,11 @@ def main():
 
 
 if __name__ == "__main__":
+    import sys
+    from tkinter.messagebox import showerror
     try:
         main()
     except KeyboardInterrupt:
         sys.exit()
     except Exception as e:
-        messagebox.showerror(title="Reconocimiento facial", message=f"{e}")
+        showerror(title="Reconocimiento facial", message=f"{e}")
