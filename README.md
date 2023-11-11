@@ -10,9 +10,9 @@ Asegúrate de tener Python instalado en tu sistema. Puedes descargar Python desd
 
 1. **Clonar el Repositorio:**
 
-git clone https://github.com/aslskks/reconocimiento_facial
-cd reconocimiento_facial-main
-pip install -r requirements.txt
+git clone https://github.com/aslskks/reconocimiento_facial  
+cd reconocimiento_facial-main  
+pip install -r requirements.txt  
 
 2. **Ejecutar:**
 python python.py
